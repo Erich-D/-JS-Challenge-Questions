@@ -19,6 +19,6 @@ test("None Screaming", ()=>{
 }) 
 
 test("Some Screaming", ()=>{
-    const result = noScreams(["aaAA","BBBb", "cccC"])
+    const result = noScreams(["aaaA","BBBb", "cccC"])
     expect(result.length).toBe(2)
 }) 
