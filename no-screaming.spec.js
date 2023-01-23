@@ -5,7 +5,6 @@
 // for, while
 
 function noScreams(ray){
-
 }
 
 test("All Screaming", ()=>{
