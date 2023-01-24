@@ -13,16 +13,12 @@
 
 
 function Car(make, model){
+    let mileage = 0;
     const car = {
-        make: make,
-        model: model,
-        mileage: 0,
-        getMileage: function(){
-            return this.mileage
-        },
-        drive: function(miles){
-            this.mileage += miles;
-        }
+        make:make,
+        model:model,
+        drive: function(miles){mileage += miles},
+        getMileage: function(){return mileage}
     }
     return car;
 }
