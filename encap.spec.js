@@ -2,7 +2,13 @@
 // the function should return an array where the first function is a getter, and the second a setter
 // the function should have a second optional parameter that defines a custom setter 
 function encapsulate(value, set){
-
+    let enval = value;
+    const getValue = function(){return enval}
+    let setValue = function(val){enval = val};
+    if(set){
+        setValue = function(val){(val < 0) ? enval = 0:val};
+    }
+    return [getValue, setValue]
 }
 
 test("simple encap",()=>{

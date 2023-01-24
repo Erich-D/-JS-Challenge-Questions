@@ -3,7 +3,12 @@
 // negative amounts should throw an error
 
 function usd(amount = 0){
-
+    if(amount < 0){
+        throw "error";
+    }else{
+        result = "$"+amount.toFixed(2);
+    }
+    return result
 }
 
 test("100 dollars", ()=>{

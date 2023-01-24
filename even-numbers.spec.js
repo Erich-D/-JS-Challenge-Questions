@@ -1,6 +1,11 @@
 // write a function that, given N, returns an array of even numbers 1-N (inclusively) using loops
 // example, generateEven(6) => [2,4,6]
 function generateEven(N) {
+    const result = [];
+    for(let i=1; i<=N; i++){
+        if(i%2==0){result.push(i)}
+    }
+    return result;
 }
 
 test("6", () => {

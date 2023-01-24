@@ -2,7 +2,12 @@
 // hint if the input is 10 that means the first 9 function calls return a function
 
 function epicClosure(value, times ){
-
+    let count = 0;
+    const time = times;
+    const val = value;
+    return (count < time) ? function(){count += 1;return count}:val;
+    
+    //return result;
 }
 
 test("1", ()=>{

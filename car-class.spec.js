@@ -12,8 +12,19 @@
 // class, set, get, this, new (yes no new keyword)
 
 
-function Car(){
-
+function Car(make, model){
+    const car = {
+        make: make,
+        model: model,
+        mileage: 0,
+        getMileage: function(){
+            return this.mileage
+        },
+        drive: function(miles){
+            this.mileage += miles;
+        }
+    }
+    return car;
 }
 
 test("Make a car", ()=>{
