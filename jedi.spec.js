@@ -3,6 +3,7 @@
 // the function would return ["Rey"]
 
 function returnJedi(characters) {
+    return characters.filter((x)=>{return x.position === "jedi"}).map((x)=>{return x.name})
 }
 
 test("All Jedi", () => {

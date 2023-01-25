@@ -4,8 +4,9 @@
 
 // note the use of rest syntax for the args
 function multiplier(times,func, ...args){
-
-
+    for(let i=0; i<times; i++){
+        func(...args);
+    }
 }
 
 test("No args", ()=>{

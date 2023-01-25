@@ -5,7 +5,11 @@
 // ex: isValid(["B","C"]) => true, isValid(["B"]) => false, etc.
 
 function isValid(documents) {
-
+    if(documents.includes("A") | (documents.includes("B") & documents.includes("C"))){
+        return true;
+    }else{
+        return false;
+    }
 }
 
 test("All Documents", () => {

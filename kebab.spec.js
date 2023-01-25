@@ -5,7 +5,8 @@
 // there should be no begining or ending dashes
 
 function kebab(phrase){
-
+    const wordArr = phrase.split(" ");
+    return wordArr.map((x)=>{return x.replace(/^[\s-]+|[\s-]+$/gm,"")}).join("-");
 }
 
 test("simple kebab", ()=>{

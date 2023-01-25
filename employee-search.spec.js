@@ -2,7 +2,7 @@
 
 function getEmployeeById(employees, id ){
     const tst = id;
-    return employees.find(({id}) => id === tst)
+    return employees.find(({id}) => id === tst);
 }
 
 test("Find employee by id", ()=>{

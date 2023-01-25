@@ -7,7 +7,7 @@
 // hint use map and sort
 
 function highScores(scores){
-
+    return scores.sort((a,b)=>{return b.points-a.points}).map((x)=>{return x.intials});
 }
 
 test('High Scores',()=>{

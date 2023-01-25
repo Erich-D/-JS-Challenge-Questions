@@ -1,12 +1,11 @@
 // create a function that uses a closure to encapsulate a value
 // the function should return an array where the first function is a getter, and the second a setter
 // the function should have a second optional parameter that defines a custom setter 
-function encapsulate(value, set){
+function encapsulate(value, set = val=>val){
     let enval = value;
     const getValue = function(){return enval}
-    let setValue = function(val){enval = val};
-    if(set){
-        setValue = function(val){(val < 0) ? enval = 0:val};
+    const setValue = function(newValue){
+        enval = set(newValue);
     }
     return [getValue, setValue]
 }

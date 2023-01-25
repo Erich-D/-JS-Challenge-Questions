@@ -5,6 +5,7 @@
 // for, while
 
 function noScreams(ray){
+    return ray.filter(e => {let ne = e.replace(/[A-Z]/gm,""); return ne.length > e.length/2;})
 }
 
 test("All Screaming", ()=>{
