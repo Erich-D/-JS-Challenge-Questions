@@ -5,9 +5,11 @@ function epicClosure(value, times ){
     let count = 0;
     const time = times;
     const val = value;
-    return (count < time) ? function(){count += 1;return count}:val;
-    
-    //return result;
+    function inc() {
+        count += 1;
+        return val
+    }
+    return ()=>{inc}
 }
 
 test("1", ()=>{

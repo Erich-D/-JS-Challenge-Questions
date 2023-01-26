@@ -5,7 +5,11 @@
 
 function postageCost(postage){
     // use object destructuring and default arguments in the destructuring to get the variables from the postaage object
-
+    let total = 0;
+    const {weight, overnight=false, continental=false} = postage;
+    if(overnight){total += 5}
+    if(continental){total += 10}
+    return total += weight*.1;
 }
 
 test("overnight outside the continent shipping", ()=>{

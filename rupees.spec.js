@@ -8,7 +8,12 @@
 // hint good use case of guards 
 
 function rupeeCalculator(wallet){
-
+    const vals = {green:1, blue:5, red:20, silver:100, gold:300};
+    let total = 0;
+    for(let key in wallet){
+        total += wallet[key]*vals[key];
+    }
+    return total;
 }
 
 test("dirt broke", ()=>{

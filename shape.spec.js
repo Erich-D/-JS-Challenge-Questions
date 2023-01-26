@@ -7,11 +7,19 @@
 // getPerimeter
 // you should throw an BadShape Error if the either sides < 3 or length is less 0
 class Shape{
-
+    static count = 0;
+    constructor(sides,length){
+        if(sides<3 | length<0){throw new BadShape}
+        this.sides = sides;
+        this.length = length;
+        Shape.count++;
+    }
+    getPerimeter(){
+        return this.sides*this.length;
+    }
 }
 
 class BadShape{
-
 }
 
 test("Triangle", ()=>{
@@ -35,3 +43,4 @@ test("line",()=>{
         const square = new Shape(2,100)
     }).toThrow(BadShape)
 })
+
