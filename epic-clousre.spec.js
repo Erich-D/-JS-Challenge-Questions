@@ -7,9 +7,9 @@ function epicClosure(value, times ){
     const val = value;
     function inc() {
         count += 1;
-        return val
+        return (count<time) ? inc:val
     }
-    return ()=>{inc}
+    return inc
 }
 
 test("1", ()=>{
